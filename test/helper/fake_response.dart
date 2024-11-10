@@ -1,3 +1,22 @@
+import 'package:flutter_practice/flutter_tdd/post_model.dart';
+import 'package:flutter_practice/flutter_tdd/post_entity.dart';
+
+const fakeJson = {
+  'id': 1,
+  'userId': 1,
+  'title':
+      "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  'body':
+      "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+};
+
+final listOfPosts = <PostEntity>[];
+void fillFakeResponse() {
+  for (var element in fakeResponse) {
+    listOfPosts.add(PostModel.fromJson(element).toEntity());
+  }
+}
+
 const fakeResponse = [
   {
     "userId": 1,

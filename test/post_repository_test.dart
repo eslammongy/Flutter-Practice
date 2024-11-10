@@ -4,17 +4,8 @@ import 'package:mockito/mockito.dart';
 import 'helper/test_helper.mocks.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_practice/flutter_tdd/post_model.dart';
-import 'package:flutter_practice/flutter_tdd/post_entity.dart';
 import 'package:flutter_practice/flutter_tdd/post_repository_impl.dart';
 
-const fakeJson = {
-  'id': 1,
-  'userId': 1,
-  'title':
-      "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-  'body':
-      "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-};
 void main() {
   late PostRepositoryImpl postRepositoryImpl;
   late MockDio mockDio;
@@ -136,10 +127,3 @@ void main() {
 }
 
 final fakePost = PostModel.fromJson(fakeJson).toEntity();
-
-final listOfPosts = <PostEntity>[];
-void fillFakeResponse() {
-  for (var element in fakeResponse) {
-    listOfPosts.add(PostModel.fromJson(element).toEntity());
-  }
-}

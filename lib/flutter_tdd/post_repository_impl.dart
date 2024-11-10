@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_practice/flutter_tdd/post_model.dart';
 import 'package:flutter_practice/flutter_tdd/post_entity.dart';
 import 'package:flutter_practice/flutter_tdd/post_repository.dart';
@@ -31,6 +32,7 @@ class PostRepositoryImpl implements PostRepository {
       {required int id}) async {
     try {
       final response = await dioClient.get("$baseUrl/posts/$id");
+      debugPrint("Status Code: ${response.statusCode}");
       if (response.statusCode == 200) {
         final post = PostModel.fromJson(response.data).toEntity();
         return Right(post);

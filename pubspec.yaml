@@ -10,12 +10,14 @@ environment:
   sdk: ^3.5.3
 
 dependencies:
+  bloc_test: ^9.1.7
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
   dio: ^5.7.0
   equatable: ^2.0.5
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
   flutter_native_splash: ^2.4.2
   font_awesome_flutter: ^10.8.0
   http: ^1.2.2
